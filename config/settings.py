@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'djoser',
     'src.profiles',
+    'src.wall',
 ]
 
 MIDDLEWARE = [
@@ -145,8 +146,8 @@ REST_FRAMEWORK = {
     ),
 }
 
+AUTH_USER_MODEL = 'profiles.UserNet'
+
 SIMPLE_JWT = {
   # 'AUTH_HEADER_TYPES': ('JWT',),
 }
-
-# AUTH_USER_MODEL = 'profiles.UserNet'

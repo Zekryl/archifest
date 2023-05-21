@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import UserNet
+from django.utils.translation import gettext_lazy as _
+from django.contrib import admin
 
 # Register your models here.
 
@@ -22,7 +24,7 @@ class UserNetAdmin(UserAdmin):
         ),
         (_("Important dates"), {"fields": ("last_login", "date_joined")}),
     )
-    list_display = ("username", "email", "phone", "first_name", "last_name", "is_staff"
+    list_display = ("username", "email", "phone", "first_name", "last_name", "is_staff")
 
 
-# admin.site.register(UserNet, UserAdmin)
+admin.site.register(UserNet, UserAdmin)
